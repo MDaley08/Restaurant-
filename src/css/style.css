@@ -1,0 +1,59 @@
+/* simple style reset */
+*{
+    margin: 0;
+    padding: 0;
+}
+@font-face {
+    font-family: 'Konigsberg';
+    src: url('../fonts/Konigsberg.otf');
+}
+:root{
+    --bg-color: rgb(182, 205, 251);
+    --acc-color: rgb(252, 202, 252);
+    --font-color: rgb(255, 255, 255); 
+}
+
+html{
+    font-size: calc(0.8rem + 0.2vw);
+}
+
+body{
+    background: repeating-linear-gradient(
+        to right,
+        var(--bg-color),
+        var(--bg-color) 95px,
+        var(--acc-color) 95px,
+        var(--acc-color) 190px);
+    height: 100vh;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 50px;
+    background-color: var(--bg-color); 
+    border-bottom: white 4px solid;
+
+}
+ul{
+    display: flex;
+    list-style: none;
+    gap:20px;
+}
+
+ul button{
+    font-family: 'Konigsberg';
+    color: var(--font-color);
+    font-size: 1.9rem;
+    font-weight: 200px;
+    border: none;
+    background:none;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+    padding: 0;
+    -webkit-text-stroke: .5px rgb(0, 0, 0);
+}
+
+ul button:hover{
+    color: var(--acc-color);
+}
