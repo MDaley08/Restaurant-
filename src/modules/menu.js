@@ -1,4 +1,4 @@
-const menu_module = (div) => {
+const menu_module = () => {
 
 }
 
