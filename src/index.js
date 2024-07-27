@@ -26,7 +26,7 @@ const tabManager = (() => {
 
         if(currPage){
             currPage.style.opacity = 0;
-            setTimeout(() => currPage.remove(),700); //waiting 700ms to remove element, to have smoother fade out
+            setTimeout(() => currPage.remove(), 500); //waiting 500ms to remove element, to have smoother fade out
         }   
         currPageId = null;
         currPageBtn.classList.remove('active');
@@ -38,7 +38,7 @@ const tabManager = (() => {
         if(currPageId){
             clearPage();
         }
-        setTimeout(pageFunc, 800);//waiting 900ms to execute page function. to remove rendering bug
+        setTimeout(pageFunc, 500);//waiting 500ms to execute page function, to remove rendering bug
         currPageId = pageId;
         btn.classList.add('active');
     }
